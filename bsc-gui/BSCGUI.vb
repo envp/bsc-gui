@@ -1,4 +1,5 @@
-﻿Public Class BSCGUI
+﻿
+Public Class BSCGUI
     ' String parameters
     Dim mode As String
     Dim context As String
@@ -45,8 +46,6 @@
         lzpMinMatchLength = numMatchLength.Value
 
         ' Block Sorting options
-
-
     End Sub
 
     Private Sub BSCGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
