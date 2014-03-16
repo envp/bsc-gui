@@ -5,8 +5,7 @@
     Dim enableStructData As Boolean
     Dim disableLZP As Boolean
 
-    ' Some filler initialization routine without with VB
-    ' won't show the control
+    ' Proxy Init Module
     Private Sub ctlPreprocOpts_Initialize()
         ' Preprocessing options
         disablePreproc = False

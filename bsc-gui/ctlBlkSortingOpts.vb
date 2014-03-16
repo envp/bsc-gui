@@ -1,12 +1,6 @@
 ﻿Public Class ctlBlkSortingOpts
-    ' Boolean options
-    Dim useSortTransform As Boolean
-    Dim useCudaAccel As Boolean
-    Dim useStatEntEnc As Boolean
-
     ' Unsigned integer parameters
     Dim blkSize As UInteger
-    Dim sortTransformOrder As UInteger
     Dim nParallel As UInteger
 
     'String Parameters
@@ -24,16 +18,11 @@
         blkSize = numBlkSize.Value
         context = comboContext.Text
 
-        ' Algorithm options
-        useStatEntEnc = rBtnEntEncStatic.Checked
-        useSortTransform = chkBoxSortTransform.Checked
-        useCudaAccel = chkBoxCUDA.Checked
-
         ' TODO Change/Fix later (Detect number of cores to be run on)
         nParallel = 1
 
         ' Misc Stuff
-        lblMemUsageNum.Text = estMemUsage(blkSize, nParallel).ToString & " " & "MB"
+        ctlAlgs.lblMemUsageNum.Text = estMemUsage(blkSize, nParallel).ToString & " " & "MB"
     End Sub
 
 
@@ -44,7 +33,7 @@
     ' Handlers for Block Sorting options
     Private Sub numBlkSize_ValueChanged(sender As Object, e As EventArgs) Handles numBlkSize.ValueChanged
         blkSize = numBlkSize.Value
-        lblMemUsageNum.Text = estMemUsage(blkSize, nParallel).ToString & " " & "MB"
+        ctlAlgs.lblMemUsageNum.Text = estMemUsage(blkSize, nParallel).ToString & " " & "MB"
     End Sub
 
     Private Sub comboContext_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comboContext.SelectedIndexChanged

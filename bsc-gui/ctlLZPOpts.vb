@@ -3,8 +3,7 @@
     Dim lzpDictSize As UInteger
     Dim lzpMinMatchLength As UInteger
 
-    ' Some filler initialization routine without with VB
-    ' won't show the control
+    ' Proxy Init Module
     Private Sub ctlLZPOpts_Initialize()
         numDictSize.Value = 16
         numMatchLength.Value = 128

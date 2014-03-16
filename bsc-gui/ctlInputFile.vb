@@ -1,8 +1,7 @@
 ﻿Public Class ctlInputFile
     Dim inFileName As String
 
-    ' Some filler initialization routine without with VB
-    ' Won't show the control
+    ' Proxy Init Module
     Private Sub ctlInputFile_Initialize()
         inFileName = Nothing
     End Sub
