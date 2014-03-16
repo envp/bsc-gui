@@ -3,7 +3,7 @@
 
     ' Some filler initialization routine without with VB
     ' Won't show the control
-    Public Sub ctlInputFile_Initialize()
+    Private Sub ctlInputFile_Initialize()
         inFileName = Nothing
     End Sub
 

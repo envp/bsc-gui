@@ -7,7 +7,7 @@
 
     ' Some filler initialization routine without with VB
     ' won't show the control
-    Public Sub ctlPreprocOpts_Initialize()
+    Private Sub ctlPreprocOpts_Initialize()
         ' Preprocessing options
         disablePreproc = False
         enableSegments = False

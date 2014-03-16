@@ -5,7 +5,7 @@ Public Class BSCGUI
     ' Preserve mode to be updated on DecompressEnabled
     ' or CompressEnabled events
     Dim mode As String
-    Dim context As String
+    'Dim context As String
 
     'Dim inFileName As String
     'Dim outFileName As String
@@ -18,26 +18,26 @@ Public Class BSCGUI
     Dim disableParallel As Boolean
     Dim disableMCS As Boolean
     Dim enableRAMPages As Boolean
-    Dim useSortTransform As Boolean
-    Dim useCudaAccel As Boolean
-    Dim useStatEntEnc As Boolean
+    'Dim useSortTransform As Boolean
+    'Dim useCudaAccel As Boolean
+    'Dim useStatEntEnc As Boolean
 
     ' Unsigned integer parameters
-    Dim blkSize As UInteger
+    'Dim blkSize As UInteger
     'Dim lzpDictSize As UInteger
     'Dim lzpMinMatchLength As UInteger
-    Dim sortTransformOrder As UInteger
-    Dim estMemUsage As UInteger
+    'Dim sortTransformOrder As UInteger
+    'Dim estMemUsage As UInteger
     Dim nParallel As UInteger = 1
     ' Loader to set everything to its defaul value / state
     Private Sub initLoader()
         ' Set options on UI, extract later
         'comboMode.Text = "Compression"
-        comboContext.Text = "Following"
+        'comboContext.Text = "Following"
 
         'numDictSize.Value = 16
         'numMatchLength.Value = 128
-        numBlkSize.Value = 25
+        'numBlkSize.Value = 25
 
         ' Preprocessing options
         'disablePreproc = False
@@ -50,17 +50,17 @@ Public Class BSCGUI
         'lzpMinMatchLength = numMatchLength.Value
 
         ' Block Sorting options
-        blkSize = numBlkSize.Value
-        context = comboContext.Text
+        'blkSize = numBlkSize.Value
+        'context = comboContext.Text
 
         ' Algorithm options
-        useStatEntEnc = rBtnEntEncStatic.Checked
-        useSortTransform = chkBoxSortTransform.Checked
-        useCudaAccel = chkBoxCUDA.Checked
+        'useStatEntEnc = rBtnEntEncStatic.Checked
+        'useSortTransform = chkBoxSortTransform.Checked
+        'useCudaAccel = chkBoxCUDA.Checked
 
         ' Est Memory Usage = 16Mb + 5 * block_size * parallel_cores_used
-        estMemUsage = 16 + 5 * blkSize * nParallel
-        lblMemUsageNum.Text = estMemUsage.ToString & " " & "MB"
+        'estMemUsage = 16 + 5 * blkSize * nParallel
+        'lblMemUsageNum.Text = estMemUsage.ToString & " " & "MB"
     End Sub
 
     Private Sub BSCGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
