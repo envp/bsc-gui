@@ -4,6 +4,9 @@
 # github commit message
 .gitmsg
 
+# logfiles
+*.log
+
 # User-specific files
 *.suo
 *.user

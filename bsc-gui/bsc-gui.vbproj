@@ -83,6 +83,12 @@
     <Compile Include="ctlInputFile.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ctlLZPOpts.Designer.vb">
+      <DependentUpon>ctlLZPOpts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctlLZPOpts.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ctlModeSelect.Designer.vb">
       <DependentUpon>ctlModeSelect.vb</DependentUpon>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctlInputFile.resx">
       <DependentUpon>ctlInputFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlLZPOpts.resx">
+      <DependentUpon>ctlLZPOpts.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctlModeSelect.resx">
       <DependentUpon>ctlModeSelect.vb</DependentUpon>

@@ -4,26 +4,15 @@
     Dim enableSegments As Boolean
     Dim enableStructData As Boolean
     Dim disableLZP As Boolean
-    Dim enable
-    ' Variables for spinners
-    Dim lzpDictSize As UInteger
-    Dim lzpMinMatchLength As UInteger
 
     ' Some filler initialization routine without with VB
-    ' Won't show the control
+    ' won't show the control
     Public Sub ctlPreprocOpts_Initialize()
-        numDictSize.Value = 16
-        numMatchLength.Value = 128
-
         ' Preprocessing options
         disablePreproc = False
         enableSegments = False
         enableStructData = False
         disableLZP = False
-
-        ' LZP options
-        lzpDictSize = numDictSize.Value
-        lzpMinMatchLength = numMatchLength.Value
     End Sub
 
     Private Sub ctlPreprocOpts_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -51,7 +40,7 @@
         disableLZP = chkBoxDsbLZP.Checked
 
         ' Disable / Enable options according to the previous change
-        grpBoxLZP.Enabled = Not disableLZP
+        ctlLZPOpts.Enabled = Not disableLZP
     End Sub
     ' End Handlers
 End Class

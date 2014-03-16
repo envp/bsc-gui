@@ -27,24 +27,17 @@ Partial Class ctlPreprocOpts
         Me.chkBoxDsbLZP = New System.Windows.Forms.CheckBox()
         Me.chkBoxEnbSegments = New System.Windows.Forms.CheckBox()
         Me.chkBoxDsbPreoproc = New System.Windows.Forms.CheckBox()
-        Me.grpBoxLZP = New System.Windows.Forms.GroupBox()
-        Me.numDictSize = New System.Windows.Forms.NumericUpDown()
-        Me.numMatchLength = New System.Windows.Forms.NumericUpDown()
-        Me.lblLZPMatchLength = New System.Windows.Forms.Label()
-        Me.lblLZPDictSize = New System.Windows.Forms.Label()
+        Me.ctlLZPOpts = New bsc_gui.ctlLZPOpts()
         Me.grpBoxPreproc.SuspendLayout()
-        Me.grpBoxLZP.SuspendLayout()
-        CType(Me.numDictSize, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numMatchLength, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'grpBoxPreproc
         '
+        Me.grpBoxPreproc.Controls.Add(Me.ctlLZPOpts)
         Me.grpBoxPreproc.Controls.Add(Me.chkBoxEnbStructData)
         Me.grpBoxPreproc.Controls.Add(Me.chkBoxDsbLZP)
         Me.grpBoxPreproc.Controls.Add(Me.chkBoxEnbSegments)
         Me.grpBoxPreproc.Controls.Add(Me.chkBoxDsbPreoproc)
-        Me.grpBoxPreproc.Controls.Add(Me.grpBoxLZP)
         Me.grpBoxPreproc.Dock = System.Windows.Forms.DockStyle.Fill
         Me.grpBoxPreproc.Location = New System.Drawing.Point(0, 0)
         Me.grpBoxPreproc.Name = "grpBoxPreproc"
@@ -93,60 +86,12 @@ Partial Class ctlPreprocOpts
         Me.chkBoxDsbPreoproc.Text = "Disable all preprocessing techniques"
         Me.chkBoxDsbPreoproc.UseVisualStyleBackColor = True
         '
-        'grpBoxLZP
+        'ctlLZPOpts
         '
-        Me.grpBoxLZP.Controls.Add(Me.numDictSize)
-        Me.grpBoxLZP.Controls.Add(Me.numMatchLength)
-        Me.grpBoxLZP.Controls.Add(Me.lblLZPMatchLength)
-        Me.grpBoxLZP.Controls.Add(Me.lblLZPDictSize)
-        Me.grpBoxLZP.Location = New System.Drawing.Point(6, 111)
-        Me.grpBoxLZP.Name = "grpBoxLZP"
-        Me.grpBoxLZP.Size = New System.Drawing.Size(313, 89)
-        Me.grpBoxLZP.TabIndex = 8
-        Me.grpBoxLZP.TabStop = False
-        Me.grpBoxLZP.Text = "Lempel-Ziv Preprocessing"
-        '
-        'numDictSize
-        '
-        Me.numDictSize.BackColor = System.Drawing.SystemColors.Window
-        Me.numDictSize.Location = New System.Drawing.Point(207, 30)
-        Me.numDictSize.Maximum = New Decimal(New Integer() {28, 0, 0, 0})
-        Me.numDictSize.Minimum = New Decimal(New Integer() {10, 0, 0, 0})
-        Me.numDictSize.Name = "numDictSize"
-        Me.numDictSize.Size = New System.Drawing.Size(100, 20)
-        Me.numDictSize.TabIndex = 9
-        Me.numDictSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.numDictSize.Value = New Decimal(New Integer() {16, 0, 0, 0})
-        '
-        'numMatchLength
-        '
-        Me.numMatchLength.Location = New System.Drawing.Point(207, 58)
-        Me.numMatchLength.Maximum = New Decimal(New Integer() {255, 0, 0, 0})
-        Me.numMatchLength.Minimum = New Decimal(New Integer() {4, 0, 0, 0})
-        Me.numMatchLength.Name = "numMatchLength"
-        Me.numMatchLength.Size = New System.Drawing.Size(100, 20)
-        Me.numMatchLength.TabIndex = 8
-        Me.numMatchLength.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.numMatchLength.ThousandsSeparator = True
-        Me.numMatchLength.Value = New Decimal(New Integer() {128, 0, 0, 0})
-        '
-        'lblLZPMatchLength
-        '
-        Me.lblLZPMatchLength.AutoSize = True
-        Me.lblLZPMatchLength.Location = New System.Drawing.Point(6, 58)
-        Me.lblLZPMatchLength.Name = "lblLZPMatchLength"
-        Me.lblLZPMatchLength.Size = New System.Drawing.Size(142, 13)
-        Me.lblLZPMatchLength.TabIndex = 7
-        Me.lblLZPMatchLength.Text = "Minimum Match Length (bits)"
-        '
-        'lblLZPDictSize
-        '
-        Me.lblLZPDictSize.AutoSize = True
-        Me.lblLZPDictSize.Location = New System.Drawing.Point(6, 32)
-        Me.lblLZPDictSize.Name = "lblLZPDictSize"
-        Me.lblLZPDictSize.Size = New System.Drawing.Size(102, 13)
-        Me.lblLZPDictSize.TabIndex = 6
-        Me.lblLZPDictSize.Text = "Dictionary Size (bits)"
+        Me.ctlLZPOpts.Location = New System.Drawing.Point(3, 108)
+        Me.ctlLZPOpts.Name = "ctlLZPOpts"
+        Me.ctlLZPOpts.Size = New System.Drawing.Size(319, 95)
+        Me.ctlLZPOpts.TabIndex = 4
         '
         'ctlPreprocOpts
         '
@@ -157,10 +102,6 @@ Partial Class ctlPreprocOpts
         Me.Size = New System.Drawing.Size(325, 206)
         Me.grpBoxPreproc.ResumeLayout(False)
         Me.grpBoxPreproc.PerformLayout()
-        Me.grpBoxLZP.ResumeLayout(False)
-        Me.grpBoxLZP.PerformLayout()
-        CType(Me.numDictSize, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numMatchLength, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -169,10 +110,6 @@ Partial Class ctlPreprocOpts
     Friend WithEvents chkBoxDsbLZP As System.Windows.Forms.CheckBox
     Friend WithEvents chkBoxEnbSegments As System.Windows.Forms.CheckBox
     Friend WithEvents chkBoxDsbPreoproc As System.Windows.Forms.CheckBox
-    Friend WithEvents grpBoxLZP As System.Windows.Forms.GroupBox
-    Friend WithEvents numDictSize As System.Windows.Forms.NumericUpDown
-    Friend WithEvents numMatchLength As System.Windows.Forms.NumericUpDown
-    Friend WithEvents lblLZPMatchLength As System.Windows.Forms.Label
-    Friend WithEvents lblLZPDictSize As System.Windows.Forms.Label
+    Friend WithEvents ctlLZPOpts As bsc_gui.ctlLZPOpts
 
 End Class
