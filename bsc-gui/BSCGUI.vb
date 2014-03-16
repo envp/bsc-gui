@@ -3,8 +3,8 @@ Public Class BSCGUI
     ' String parameters
     Dim mode As String
     Dim context As String
-    Dim inFileName As String
-    Dim outFileName As String
+    'Dim inFileName As String
+    'Dim outFileName As String
 
     ' Boolean options, set to False to imply not ticked/selected
     Dim disablePreproc As Boolean
