@@ -77,6 +77,36 @@
       <DependentUpon>BSCGUI.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ctlInputFile.Designer.vb">
+      <DependentUpon>ctlInputFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctlInputFile.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlLZPOpts.Designer.vb">
+      <DependentUpon>ctlLZPOpts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctlLZPOpts.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlModeSelect.Designer.vb">
+      <DependentUpon>ctlModeSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctlModeSelect.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlOutputFile.Designer.vb">
+      <DependentUpon>ctlOutputFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctlOutputFile.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlPreprocOpts.Designer.vb">
+      <DependentUpon>ctlPreprocOpts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctlPreprocOpts.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -96,6 +126,21 @@
   <ItemGroup>
     <EmbeddedResource Include="BSCGUI.resx">
       <DependentUpon>BSCGUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlInputFile.resx">
+      <DependentUpon>ctlInputFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlLZPOpts.resx">
+      <DependentUpon>ctlLZPOpts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlModeSelect.resx">
+      <DependentUpon>ctlModeSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlOutputFile.resx">
+      <DependentUpon>ctlOutputFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlPreprocOpts.resx">
+      <DependentUpon>ctlPreprocOpts.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

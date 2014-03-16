@@ -1,3 +1,0 @@
-﻿Module PostLoader
-
-End Module
