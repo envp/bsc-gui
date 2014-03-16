@@ -46,7 +46,7 @@ Partial Class BSCGUI
         Me.ctlModeSelect = New bsc_gui.ctlModeSelect()
         Me.ctlOutputFile = New bsc_gui.ctlOutputFile()
         Me.ctlInputFile = New bsc_gui.ctlInputFile()
-        Me.CtlPreprocOpts1 = New bsc_gui.ctlPreprocOpts()
+        Me.ctlPreprocOpts = New bsc_gui.ctlPreprocOpts()
         Me.MainPanel.SuspendLayout()
         Me.tableCOpts.SuspendLayout()
         Me.grpBoxBlockSort.SuspendLayout()
@@ -125,7 +125,7 @@ Partial Class BSCGUI
         Me.tableCOpts.ColumnCount = 2
         Me.tableCOpts.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.tableCOpts.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tableCOpts.Controls.Add(Me.CtlPreprocOpts1, 0, 0)
+        Me.tableCOpts.Controls.Add(Me.ctlPreprocOpts, 0, 0)
         Me.tableCOpts.Controls.Add(Me.grpBoxBlockSort, 1, 0)
         Me.tableCOpts.Location = New System.Drawing.Point(15, 130)
         Me.tableCOpts.Name = "tableCOpts"
@@ -310,12 +310,12 @@ Partial Class BSCGUI
         Me.ctlInputFile.Size = New System.Drawing.Size(698, 36)
         Me.ctlInputFile.TabIndex = 22
         '
-        'CtlPreprocOpts1
+        'ctlPreprocOpts
         '
-        Me.CtlPreprocOpts1.Location = New System.Drawing.Point(3, 3)
-        Me.CtlPreprocOpts1.Name = "CtlPreprocOpts1"
-        Me.CtlPreprocOpts1.Size = New System.Drawing.Size(325, 206)
-        Me.CtlPreprocOpts1.TabIndex = 13
+        Me.ctlPreprocOpts.Location = New System.Drawing.Point(3, 3)
+        Me.ctlPreprocOpts.Name = "ctlPreprocOpts"
+        Me.ctlPreprocOpts.Size = New System.Drawing.Size(325, 206)
+        Me.ctlPreprocOpts.TabIndex = 13
         '
         'BSCGUI
         '
@@ -363,6 +363,6 @@ Partial Class BSCGUI
     Friend WithEvents ctlInputFile As bsc_gui.ctlInputFile
     Friend WithEvents ctlOutputFile As bsc_gui.ctlOutputFile
     Friend WithEvents ctlModeSelect As bsc_gui.ctlModeSelect
-    Friend WithEvents CtlPreprocOpts1 As bsc_gui.ctlPreprocOpts
+    Friend WithEvents ctlPreprocOpts As bsc_gui.ctlPreprocOpts
 
 End Class
