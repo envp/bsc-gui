@@ -11,10 +11,10 @@ Public Class BSCGUI
     'Dim outFileName As String
 
     ' Boolean options, set to False to imply not ticked/selected
-    Dim disablePreproc As Boolean
-    Dim disableSegments As Boolean
-    Dim enableStructData As Boolean
-    Dim disableLZP As Boolean
+    'Dim disablePreproc As Boolean
+    'Dim disableSegments As Boolean
+    'Dim enableStructData As Boolean
+    'Dim disableLZP As Boolean
     Dim disableParallel As Boolean
     Dim disableMCS As Boolean
     Dim enableRAMPages As Boolean
@@ -24,8 +24,8 @@ Public Class BSCGUI
 
     ' Unsigned integer parameters
     Dim blkSize As UInteger
-    Dim lzpDictSize As UInteger
-    Dim lzpMinMatchLength As UInteger
+    'Dim lzpDictSize As UInteger
+    'Dim lzpMinMatchLength As UInteger
     Dim sortTransformOrder As UInteger
     Dim estMemUsage As UInteger
     Dim nParallel As UInteger = 1
@@ -35,19 +35,19 @@ Public Class BSCGUI
         'comboMode.Text = "Compression"
         comboContext.Text = "Following"
 
-        numDictSize.Value = 16
-        numMatchLength.Value = 128
+        'numDictSize.Value = 16
+        'numMatchLength.Value = 128
         numBlkSize.Value = 25
 
         ' Preprocessing options
-        disablePreproc = False
-        disableSegments = False
-        enableStructData = False
-        disableLZP = False
+        'disablePreproc = False
+        'disableSegments = False
+        'enableStructData = False
+        'disableLZP = False
 
         ' LZP options
-        lzpDictSize = numDictSize.Value
-        lzpMinMatchLength = numMatchLength.Value
+        'lzpDictSize = numDictSize.Value
+        'lzpMinMatchLength = numMatchLength.Value
 
         ' Block Sorting options
         blkSize = numBlkSize.Value

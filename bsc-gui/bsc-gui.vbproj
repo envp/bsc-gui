@@ -95,6 +95,12 @@
     <Compile Include="ctlOutputFile.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ctlPreprocOpts.Designer.vb">
+      <DependentUpon>ctlPreprocOpts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctlPreprocOpts.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctlOutputFile.resx">
       <DependentUpon>ctlOutputFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlPreprocOpts.resx">
+      <DependentUpon>ctlPreprocOpts.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
