@@ -60,8 +60,8 @@ Public Class BSCGUI
     End Sub
 
     Private Sub BSCGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        inFileName = txtInFile.Text
-        outFileName = txtOutFile.Text
+        'inFileName = txtInFile.Text
+        'outFileName = txtOutFile.Text
         initLoader()
     End Sub
 
@@ -78,20 +78,20 @@ Public Class BSCGUI
     ' End Set / Unset Handlers
 
 
-    ' File Dialog Handlers
-    Private Sub btnOpenFile_Click(sender As Object, e As EventArgs) Handles btnOpenFile.Click
-        If openFileDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            txtInFile.Text = openFileDialog.FileName
-            inFileName = txtInFile.Text
-        End If
-    End Sub
+    'File Dialog Handlers
+    'Private Sub btnOpenFile_Click(sender As Object, e As EventArgs)
+    '    If openFileDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
+    '        txtInFile.Text = openFileDialog.FileName
+    '        inFileName = txtInFile.Text
+    '    End If
+    'End Sub
 
-    Private Sub btnSaveFile_Click(sender As Object, e As EventArgs) Handles btnSaveFile.Click
-        If saveFileDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            txtOutFile.Text = saveFileDialog.FileName
-            outFileName = txtOutFile.Text
-        End If
-    End Sub
+    'Private Sub btnSaveFile_Click(sender As Object, e As EventArgs) Handles btnSaveFile.Click
+    '    If saveFileDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
+    '        txtOutFile.Text = saveFileDialog.FileName
+    '        outFileName = txtOutFile.Text
+    '    End If
+    'End Sub
     ' End File Dialog Handlers
 
     ' Handlers for exit / OK

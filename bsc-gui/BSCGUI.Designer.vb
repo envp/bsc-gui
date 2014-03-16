@@ -55,15 +55,8 @@ Partial Class BSCGUI
         Me.numMatchLength = New System.Windows.Forms.NumericUpDown()
         Me.lblLZPMatchLength = New System.Windows.Forms.Label()
         Me.lblLZPDictSize = New System.Windows.Forms.Label()
-        Me.btnSaveFile = New System.Windows.Forms.Button()
-        Me.btnOpenFile = New System.Windows.Forms.Button()
-        Me.txtOutFile = New System.Windows.Forms.TextBox()
-        Me.txtInFile = New System.Windows.Forms.TextBox()
-        Me.lblOutput = New System.Windows.Forms.Label()
-        Me.lblInput = New System.Windows.Forms.Label()
-        Me.openFileDialog = New System.Windows.Forms.OpenFileDialog()
-        Me.saveFileDialog = New System.Windows.Forms.SaveFileDialog()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ctlInputFile = New bsc_gui.ctlInputFile()
+        Me.ctlOutputFile = New bsc_gui.ctlOutputFile()
         Me.MainPanel.SuspendLayout()
         Me.tableCOpts.SuspendLayout()
         Me.grpBoxBlockSort.SuspendLayout()
@@ -78,6 +71,8 @@ Partial Class BSCGUI
         '
         'MainPanel
         '
+        Me.MainPanel.Controls.Add(Me.ctlOutputFile)
+        Me.MainPanel.Controls.Add(Me.ctlInputFile)
         Me.MainPanel.Controls.Add(Me.btnOK)
         Me.MainPanel.Controls.Add(Me.btnCancel)
         Me.MainPanel.Controls.Add(Me.chkBoxDsbMCS)
@@ -86,12 +81,6 @@ Partial Class BSCGUI
         Me.MainPanel.Controls.Add(Me.comboMode)
         Me.MainPanel.Controls.Add(Me.lblMode)
         Me.MainPanel.Controls.Add(Me.tableCOpts)
-        Me.MainPanel.Controls.Add(Me.btnSaveFile)
-        Me.MainPanel.Controls.Add(Me.btnOpenFile)
-        Me.MainPanel.Controls.Add(Me.txtOutFile)
-        Me.MainPanel.Controls.Add(Me.txtInFile)
-        Me.MainPanel.Controls.Add(Me.lblOutput)
-        Me.MainPanel.Controls.Add(Me.lblInput)
         Me.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MainPanel.Location = New System.Drawing.Point(0, 0)
         Me.MainPanel.Name = "MainPanel"
@@ -445,68 +434,19 @@ Partial Class BSCGUI
         Me.lblLZPDictSize.TabIndex = 6
         Me.lblLZPDictSize.Text = "Dictionary Size (bits)"
         '
-        'btnSaveFile
+        'ctlInputFile
         '
-        Me.btnSaveFile.Location = New System.Drawing.Point(592, 68)
-        Me.btnSaveFile.Name = "btnSaveFile"
-        Me.btnSaveFile.Size = New System.Drawing.Size(100, 22)
-        Me.btnSaveFile.TabIndex = 5
-        Me.btnSaveFile.Text = "Save As..."
-        Me.btnSaveFile.UseVisualStyleBackColor = True
+        Me.ctlInputFile.Location = New System.Drawing.Point(3, 12)
+        Me.ctlInputFile.Name = "ctlInputFile"
+        Me.ctlInputFile.Size = New System.Drawing.Size(698, 36)
+        Me.ctlInputFile.TabIndex = 22
         '
-        'btnOpenFile
+        'ctlOutputFile
         '
-        Me.btnOpenFile.Location = New System.Drawing.Point(592, 25)
-        Me.btnOpenFile.Name = "btnOpenFile"
-        Me.btnOpenFile.Size = New System.Drawing.Size(100, 22)
-        Me.btnOpenFile.TabIndex = 4
-        Me.btnOpenFile.Text = "Open File..."
-        Me.btnOpenFile.UseVisualStyleBackColor = True
-        '
-        'txtOutFile
-        '
-        Me.txtOutFile.Location = New System.Drawing.Point(15, 70)
-        Me.txtOutFile.Name = "txtOutFile"
-        Me.txtOutFile.Size = New System.Drawing.Size(571, 20)
-        Me.txtOutFile.TabIndex = 3
-        '
-        'txtInFile
-        '
-        Me.txtInFile.Location = New System.Drawing.Point(15, 27)
-        Me.txtInFile.Name = "txtInFile"
-        Me.txtInFile.Size = New System.Drawing.Size(571, 20)
-        Me.txtInFile.TabIndex = 2
-        '
-        'lblOutput
-        '
-        Me.lblOutput.AutoSize = True
-        Me.lblOutput.Location = New System.Drawing.Point(12, 54)
-        Me.lblOutput.Name = "lblOutput"
-        Me.lblOutput.Size = New System.Drawing.Size(42, 13)
-        Me.lblOutput.TabIndex = 1
-        Me.lblOutput.Text = "Output:"
-        '
-        'lblInput
-        '
-        Me.lblInput.AutoSize = True
-        Me.lblInput.Location = New System.Drawing.Point(12, 11)
-        Me.lblInput.Name = "lblInput"
-        Me.lblInput.Size = New System.Drawing.Size(34, 13)
-        Me.lblInput.TabIndex = 0
-        Me.lblInput.Text = "Input:"
-        '
-        'openFileDialog
-        '
-        Me.openFileDialog.Filter = "All files (*.*)|*.*|Text (*.txt)|*.txt|Documents (*.doc, *.docx)|*.doc*|Excel (*." & _
-    "xls, *.xlsx)|*.xls*|Powerpoint (*.ppt, *.pptx)|*.ppt*|PDF (*.pdf)|*.pdf"
-        '
-        'saveFileDialog
-        '
-        Me.saveFileDialog.Filter = "All files (*.*)|*.*|Block Archives (*.bsc)|*.bsc"
-        '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        Me.ctlOutputFile.Location = New System.Drawing.Point(3, 54)
+        Me.ctlOutputFile.Name = "ctlOutputFile"
+        Me.ctlOutputFile.Size = New System.Drawing.Size(698, 36)
+        Me.ctlOutputFile.TabIndex = 23
         '
         'BSCGUI
         '
@@ -541,12 +481,6 @@ Partial Class BSCGUI
     Friend WithEvents tableCOpts As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents grpBoxBlockSort As System.Windows.Forms.GroupBox
     Friend WithEvents grpBoxPreproc As System.Windows.Forms.GroupBox
-    Friend WithEvents btnSaveFile As System.Windows.Forms.Button
-    Friend WithEvents btnOpenFile As System.Windows.Forms.Button
-    Friend WithEvents txtOutFile As System.Windows.Forms.TextBox
-    Friend WithEvents txtInFile As System.Windows.Forms.TextBox
-    Friend WithEvents lblOutput As System.Windows.Forms.Label
-    Friend WithEvents lblInput As System.Windows.Forms.Label
     Friend WithEvents comboMode As System.Windows.Forms.ComboBox
     Friend WithEvents chkBoxEnbStructData As System.Windows.Forms.CheckBox
     Friend WithEvents chkBoxDsbLZP As System.Windows.Forms.CheckBox
@@ -575,8 +509,7 @@ Partial Class BSCGUI
     Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents lblMemUsageNum As System.Windows.Forms.Label
     Friend WithEvents lblMemUsageTag As System.Windows.Forms.Label
-    Friend WithEvents openFileDialog As System.Windows.Forms.OpenFileDialog
-    Friend WithEvents saveFileDialog As System.Windows.Forms.SaveFileDialog
-    Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents ctlInputFile As bsc_gui.ctlInputFile
+    Friend WithEvents ctlOutputFile As bsc_gui.ctlOutputFile
 
 End Class
