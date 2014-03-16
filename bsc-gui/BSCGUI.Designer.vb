@@ -247,9 +247,9 @@ Partial Class BSCGUI
         Me.lblMemUsageTag.AutoSize = True
         Me.lblMemUsageTag.Location = New System.Drawing.Point(6, 96)
         Me.lblMemUsageTag.Name = "lblMemUsageTag"
-        Me.lblMemUsageTag.Size = New System.Drawing.Size(199, 13)
+        Me.lblMemUsageTag.Size = New System.Drawing.Size(193, 13)
         Me.lblMemUsageTag.TabIndex = 17
-        Me.lblMemUsageTag.Text = "Estimated Memory Usage (Compression):"
+        Me.lblMemUsageTag.Text = "Estimated Memory Usage (Single Core):"
         '
         'chkBoxCUDA
         '
@@ -291,13 +291,13 @@ Partial Class BSCGUI
         Me.rBtnEntEncAdaptive.Name = "rBtnEntEncAdaptive"
         Me.rBtnEntEncAdaptive.Size = New System.Drawing.Size(67, 17)
         Me.rBtnEntEncAdaptive.TabIndex = 15
-        Me.rBtnEntEncAdaptive.TabStop = True
         Me.rBtnEntEncAdaptive.Text = "Adaptive"
         Me.rBtnEntEncAdaptive.UseVisualStyleBackColor = True
         '
         'rBtnEntEncStatic
         '
         Me.rBtnEntEncStatic.AutoSize = True
+        Me.rBtnEntEncStatic.Checked = True
         Me.rBtnEntEncStatic.Location = New System.Drawing.Point(137, 19)
         Me.rBtnEntEncStatic.Name = "rBtnEntEncStatic"
         Me.rBtnEntEncStatic.Size = New System.Drawing.Size(52, 17)

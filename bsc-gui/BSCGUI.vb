@@ -5,7 +5,6 @@ Public Class BSCGUI
     Dim context As String
     Dim inFileName As String
     Dim outFileName As String
-    Dim entropyMode As String
 
     ' Boolean options, set to False to imply not ticked/selected
     Dim disablePreproc As Boolean
@@ -16,7 +15,8 @@ Public Class BSCGUI
     Dim disableMCS As Boolean
     Dim enableRAMPages As Boolean
     Dim useSortTransform As Boolean
-    Dim cudaAccel As Boolean
+    Dim useCudaAccel As Boolean
+    Dim useStatEntEnc As Boolean
 
     ' Unsigned integer parameters
     Dim blkSize As UInteger
@@ -24,7 +24,7 @@ Public Class BSCGUI
     Dim lzpMinMatchLength As UInteger
     Dim sortTransformOrder As UInteger
     Dim estMemUsage As UInteger
-
+    Dim nParallel As UInteger = 1
     ' Loader to set everything to its defaul value / state
     Private Sub initLoader()
         ' Set options on UI, extract later
@@ -46,6 +46,17 @@ Public Class BSCGUI
         lzpMinMatchLength = numMatchLength.Value
 
         ' Block Sorting options
+        blkSize = numBlkSize.Value
+        context = comboContext.Text
+
+        ' Algorithm options
+        useStatEntEnc = rBtnEntEncStatic.Checked
+        useSortTransform = chkBoxSortTransform.Checked
+        useCudaAccel = chkBoxCUDA.Checked
+
+        ' Est Memory Usage = 16Mb + 5 * block_size * parallel_cores_used
+        estMemUsage = 16 + 5 * blkSize * nParallel
+        lblMemUsageNum.Text = estMemUsage.ToString & " " & "MB"
     End Sub
 
     Private Sub BSCGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
