@@ -2,8 +2,8 @@
     ' Custom Event to notify if comboBox has changed
     Public Event modeChanged(ByVal num As UInteger)
 
-    ' 
-    Public Sub ctlModeSelect_Initialize()
+    ' Proxy Init Module
+    Private Sub ctlModeSelect_Initialize()
         comboMode.Text = "Compression"
     End Sub
 
