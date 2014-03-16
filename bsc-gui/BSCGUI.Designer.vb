@@ -28,8 +28,6 @@ Partial Class BSCGUI
         Me.chkBoxDsbMCS = New System.Windows.Forms.CheckBox()
         Me.chkBoxEnbRAM = New System.Windows.Forms.CheckBox()
         Me.chkBoxDsbParallel = New System.Windows.Forms.CheckBox()
-        Me.comboMode = New System.Windows.Forms.ComboBox()
-        Me.lblMode = New System.Windows.Forms.Label()
         Me.tableCOpts = New System.Windows.Forms.TableLayoutPanel()
         Me.grpBoxBlockSort = New System.Windows.Forms.GroupBox()
         Me.comboContext = New System.Windows.Forms.ComboBox()
@@ -55,8 +53,9 @@ Partial Class BSCGUI
         Me.numMatchLength = New System.Windows.Forms.NumericUpDown()
         Me.lblLZPMatchLength = New System.Windows.Forms.Label()
         Me.lblLZPDictSize = New System.Windows.Forms.Label()
-        Me.ctlInputFile = New bsc_gui.ctlInputFile()
+        Me.ctlModeSelect = New bsc_gui.ctlModeSelect()
         Me.ctlOutputFile = New bsc_gui.ctlOutputFile()
+        Me.ctlInputFile = New bsc_gui.ctlInputFile()
         Me.MainPanel.SuspendLayout()
         Me.tableCOpts.SuspendLayout()
         Me.grpBoxBlockSort.SuspendLayout()
@@ -71,6 +70,7 @@ Partial Class BSCGUI
         '
         'MainPanel
         '
+        Me.MainPanel.Controls.Add(Me.ctlModeSelect)
         Me.MainPanel.Controls.Add(Me.ctlOutputFile)
         Me.MainPanel.Controls.Add(Me.ctlInputFile)
         Me.MainPanel.Controls.Add(Me.btnOK)
@@ -78,8 +78,6 @@ Partial Class BSCGUI
         Me.MainPanel.Controls.Add(Me.chkBoxDsbMCS)
         Me.MainPanel.Controls.Add(Me.chkBoxEnbRAM)
         Me.MainPanel.Controls.Add(Me.chkBoxDsbParallel)
-        Me.MainPanel.Controls.Add(Me.comboMode)
-        Me.MainPanel.Controls.Add(Me.lblMode)
         Me.MainPanel.Controls.Add(Me.tableCOpts)
         Me.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MainPanel.Location = New System.Drawing.Point(0, 0)
@@ -134,26 +132,6 @@ Partial Class BSCGUI
         Me.chkBoxDsbParallel.TabIndex = 17
         Me.chkBoxDsbParallel.Text = "Disable parallel blocks processing"
         Me.chkBoxDsbParallel.UseVisualStyleBackColor = True
-        '
-        'comboMode
-        '
-        Me.comboMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.comboMode.FormattingEnabled = True
-        Me.comboMode.ItemHeight = 13
-        Me.comboMode.Items.AddRange(New Object() {"Compression", "Decompression"})
-        Me.comboMode.Location = New System.Drawing.Point(58, 102)
-        Me.comboMode.Name = "comboMode"
-        Me.comboMode.Size = New System.Drawing.Size(120, 21)
-        Me.comboMode.TabIndex = 7
-        '
-        'lblMode
-        '
-        Me.lblMode.AutoSize = True
-        Me.lblMode.Location = New System.Drawing.Point(15, 105)
-        Me.lblMode.Name = "lblMode"
-        Me.lblMode.Size = New System.Drawing.Size(37, 13)
-        Me.lblMode.TabIndex = 0
-        Me.lblMode.Text = "Mode:"
         '
         'tableCOpts
         '
@@ -434,12 +412,12 @@ Partial Class BSCGUI
         Me.lblLZPDictSize.TabIndex = 6
         Me.lblLZPDictSize.Text = "Dictionary Size (bits)"
         '
-        'ctlInputFile
+        'ctlModeSelect
         '
-        Me.ctlInputFile.Location = New System.Drawing.Point(3, 12)
-        Me.ctlInputFile.Name = "ctlInputFile"
-        Me.ctlInputFile.Size = New System.Drawing.Size(698, 36)
-        Me.ctlInputFile.TabIndex = 22
+        Me.ctlModeSelect.Location = New System.Drawing.Point(12, 98)
+        Me.ctlModeSelect.Name = "ctlModeSelect"
+        Me.ctlModeSelect.Size = New System.Drawing.Size(166, 26)
+        Me.ctlModeSelect.TabIndex = 24
         '
         'ctlOutputFile
         '
@@ -447,6 +425,13 @@ Partial Class BSCGUI
         Me.ctlOutputFile.Name = "ctlOutputFile"
         Me.ctlOutputFile.Size = New System.Drawing.Size(698, 36)
         Me.ctlOutputFile.TabIndex = 23
+        '
+        'ctlInputFile
+        '
+        Me.ctlInputFile.Location = New System.Drawing.Point(3, 12)
+        Me.ctlInputFile.Name = "ctlInputFile"
+        Me.ctlInputFile.Size = New System.Drawing.Size(698, 36)
+        Me.ctlInputFile.TabIndex = 22
         '
         'BSCGUI
         '
@@ -477,11 +462,9 @@ Partial Class BSCGUI
 
     End Sub
     Friend WithEvents MainPanel As System.Windows.Forms.Panel
-    Friend WithEvents lblMode As System.Windows.Forms.Label
     Friend WithEvents tableCOpts As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents grpBoxBlockSort As System.Windows.Forms.GroupBox
     Friend WithEvents grpBoxPreproc As System.Windows.Forms.GroupBox
-    Friend WithEvents comboMode As System.Windows.Forms.ComboBox
     Friend WithEvents chkBoxEnbStructData As System.Windows.Forms.CheckBox
     Friend WithEvents chkBoxDsbLZP As System.Windows.Forms.CheckBox
     Friend WithEvents chkBoxEnbSegments As System.Windows.Forms.CheckBox
@@ -511,5 +494,6 @@ Partial Class BSCGUI
     Friend WithEvents lblMemUsageTag As System.Windows.Forms.Label
     Friend WithEvents ctlInputFile As bsc_gui.ctlInputFile
     Friend WithEvents ctlOutputFile As bsc_gui.ctlOutputFile
+    Friend WithEvents ctlModeSelect As bsc_gui.ctlModeSelect
 
 End Class

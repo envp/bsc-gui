@@ -1,8 +1,12 @@
 ﻿
 Public Class BSCGUI
     ' String parameters
+
+    ' Preserve mode to be updated on DecompressEnabled
+    ' or CompressEnabled events
     Dim mode As String
     Dim context As String
+
     'Dim inFileName As String
     'Dim outFileName As String
 
@@ -28,7 +32,7 @@ Public Class BSCGUI
     ' Loader to set everything to its defaul value / state
     Private Sub initLoader()
         ' Set options on UI, extract later
-        comboMode.Text = "Compression"
+        'comboMode.Text = "Compression"
         comboContext.Text = "Following"
 
         numDictSize.Value = 16
@@ -65,20 +69,20 @@ Public Class BSCGUI
         initLoader()
     End Sub
 
-    ' Set / Unset Handlers
-    Private Sub comboMode_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comboMode.SelectedIndexChanged
-        If comboMode.Text = "Decompression" Then
-            tableCOpts.Enabled = False
-            mode = "d"
-        ElseIf comboMode.Text = "Compression" Then
-            tableCOpts.Enabled = True
-            mode = "e"
-        End If
-    End Sub
-    ' End Set / Unset Handlers
+    '' Set / Unset Handlers
+    'Private Sub comboMode_SelectedIndexChanged(sender As Object, e As EventArgs) Handles comboMode.SelectedIndexChanged
+    '    If comboMode.Text = "Decompression" Then
+    '        tableCOpts.Enabled = False
+    '        mode = "d"
+    '    ElseIf comboMode.Text = "Compression" Then
+    '        tableCOpts.Enabled = True
+    '        mode = "e"
+    '    End If
+    'End Sub
+    '' End Set / Unset Handlers
 
 
-    'File Dialog Handlers
+    '' File Dialog Handlers
     'Private Sub btnOpenFile_Click(sender As Object, e As EventArgs)
     '    If openFileDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
     '        txtInFile.Text = openFileDialog.FileName
@@ -92,7 +96,7 @@ Public Class BSCGUI
     '        outFileName = txtOutFile.Text
     '    End If
     'End Sub
-    ' End File Dialog Handlers
+    '' End File Dialog Handlers
 
     ' Handlers for exit / OK
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
@@ -103,4 +107,13 @@ Public Class BSCGUI
     End Sub
     ' End Handlers for exit / OK
 
+    Private Sub modeChanged_Change(n As UInteger) Handles ctlModeSelect.modeChanged
+        If n = 0 Then
+            mode = "e"
+            tableCOpts.Enabled = True
+        ElseIf n = 1 Then
+            mode = "d"
+            tableCOpts.Enabled = False
+        End If
+    End Sub
 End Class

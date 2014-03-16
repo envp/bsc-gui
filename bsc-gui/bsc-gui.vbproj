@@ -83,6 +83,12 @@
     <Compile Include="ctlInputFile.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ctlModeSelect.Designer.vb">
+      <DependentUpon>ctlModeSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctlModeSelect.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ctlOutputFile.Designer.vb">
       <DependentUpon>ctlOutputFile.vb</DependentUpon>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctlInputFile.resx">
       <DependentUpon>ctlInputFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlModeSelect.resx">
+      <DependentUpon>ctlModeSelect.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctlOutputFile.resx">
       <DependentUpon>ctlOutputFile.vb</DependentUpon>
