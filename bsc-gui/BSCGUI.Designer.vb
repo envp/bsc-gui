@@ -24,6 +24,8 @@ Partial Class BSCGUI
     Private Sub InitializeComponent()
         Me.MainPanel = New System.Windows.Forms.Panel()
         Me.tableCOpts = New System.Windows.Forms.TableLayoutPanel()
+        Me.prgBarTask = New System.Windows.Forms.ProgressBar()
+        Me.lblStatus = New System.Windows.Forms.Label()
         Me.ctlMiscOptions = New bsc_gui.ctlMiscOptions()
         Me.ctlBtnGrpConfirm = New bsc_gui.ctlBtnGrpConfirm()
         Me.ctlModeSelect = New bsc_gui.ctlModeSelect()
@@ -31,8 +33,6 @@ Partial Class BSCGUI
         Me.ctlInputFile = New bsc_gui.ctlInputFile()
         Me.ctlPreprocOpts = New bsc_gui.ctlPreprocOpts()
         Me.ctlBlkSortingOpts = New bsc_gui.ctlBlkSortingOpts()
-        Me.prgBarTask = New System.Windows.Forms.ProgressBar()
-        Me.lblStatus = New System.Windows.Forms.Label()
         Me.MainPanel.SuspendLayout()
         Me.tableCOpts.SuspendLayout()
         Me.SuspendLayout()
@@ -66,6 +66,22 @@ Partial Class BSCGUI
         Me.tableCOpts.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.tableCOpts.Size = New System.Drawing.Size(662, 212)
         Me.tableCOpts.TabIndex = 6
+        '
+        'prgBarTask
+        '
+        Me.prgBarTask.Location = New System.Drawing.Point(15, 417)
+        Me.prgBarTask.Name = "prgBarTask"
+        Me.prgBarTask.Size = New System.Drawing.Size(677, 4)
+        Me.prgBarTask.Step = 1
+        Me.prgBarTask.TabIndex = 26
+        '
+        'lblStatus
+        '
+        Me.lblStatus.AutoSize = True
+        Me.lblStatus.Location = New System.Drawing.Point(12, 424)
+        Me.lblStatus.Name = "lblStatus"
+        Me.lblStatus.Size = New System.Drawing.Size(0, 13)
+        Me.lblStatus.TabIndex = 28
         '
         'ctlMiscOptions
         '
@@ -115,23 +131,6 @@ Partial Class BSCGUI
         Me.ctlBlkSortingOpts.Name = "ctlBlkSortingOpts"
         Me.ctlBlkSortingOpts.Size = New System.Drawing.Size(325, 206)
         Me.ctlBlkSortingOpts.TabIndex = 14
-        '
-        'prgBarTask
-        '
-        Me.prgBarTask.Location = New System.Drawing.Point(15, 417)
-        Me.prgBarTask.Name = "prgBarTask"
-        Me.prgBarTask.Size = New System.Drawing.Size(677, 4)
-        Me.prgBarTask.Step = 1
-        Me.prgBarTask.TabIndex = 26
-        '
-        'lblStatus
-        '
-        Me.lblStatus.AutoSize = True
-        Me.lblStatus.Location = New System.Drawing.Point(12, 424)
-        Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(39, 13)
-        Me.lblStatus.TabIndex = 28
-        Me.lblStatus.Text = "Label1"
         '
         'BSCGUI
         '
