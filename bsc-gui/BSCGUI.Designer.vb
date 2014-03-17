@@ -23,21 +23,23 @@ Partial Class BSCGUI
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.MainPanel = New System.Windows.Forms.Panel()
+        Me.tableCOpts = New System.Windows.Forms.TableLayoutPanel()
         Me.ctlMiscOptions = New bsc_gui.ctlMiscOptions()
-        Me.prgBarTask = New System.Windows.Forms.ProgressBar()
         Me.ctlBtnGrpConfirm = New bsc_gui.ctlBtnGrpConfirm()
         Me.ctlModeSelect = New bsc_gui.ctlModeSelect()
         Me.ctlOutputFile = New bsc_gui.ctlOutputFile()
         Me.ctlInputFile = New bsc_gui.ctlInputFile()
-        Me.tableCOpts = New System.Windows.Forms.TableLayoutPanel()
         Me.ctlPreprocOpts = New bsc_gui.ctlPreprocOpts()
         Me.ctlBlkSortingOpts = New bsc_gui.ctlBlkSortingOpts()
+        Me.prgBarTask = New System.Windows.Forms.ProgressBar()
+        Me.lblStatus = New System.Windows.Forms.Label()
         Me.MainPanel.SuspendLayout()
         Me.tableCOpts.SuspendLayout()
         Me.SuspendLayout()
         '
         'MainPanel
         '
+        Me.MainPanel.Controls.Add(Me.lblStatus)
         Me.MainPanel.Controls.Add(Me.ctlMiscOptions)
         Me.MainPanel.Controls.Add(Me.prgBarTask)
         Me.MainPanel.Controls.Add(Me.ctlBtnGrpConfirm)
@@ -51,20 +53,26 @@ Partial Class BSCGUI
         Me.MainPanel.Size = New System.Drawing.Size(704, 442)
         Me.MainPanel.TabIndex = 0
         '
+        'tableCOpts
+        '
+        Me.tableCOpts.ColumnCount = 2
+        Me.tableCOpts.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tableCOpts.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tableCOpts.Controls.Add(Me.ctlPreprocOpts, 0, 0)
+        Me.tableCOpts.Controls.Add(Me.ctlBlkSortingOpts, 1, 0)
+        Me.tableCOpts.Location = New System.Drawing.Point(15, 130)
+        Me.tableCOpts.Name = "tableCOpts"
+        Me.tableCOpts.RowCount = 1
+        Me.tableCOpts.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tableCOpts.Size = New System.Drawing.Size(662, 212)
+        Me.tableCOpts.TabIndex = 6
+        '
         'ctlMiscOptions
         '
         Me.ctlMiscOptions.Location = New System.Drawing.Point(15, 345)
         Me.ctlMiscOptions.Name = "ctlMiscOptions"
         Me.ctlMiscOptions.Size = New System.Drawing.Size(187, 69)
         Me.ctlMiscOptions.TabIndex = 27
-        '
-        'prgBarTask
-        '
-        Me.prgBarTask.Location = New System.Drawing.Point(15, 417)
-        Me.prgBarTask.Name = "prgBarTask"
-        Me.prgBarTask.Size = New System.Drawing.Size(677, 13)
-        Me.prgBarTask.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        Me.prgBarTask.TabIndex = 26
         '
         'ctlBtnGrpConfirm
         '
@@ -94,20 +102,6 @@ Partial Class BSCGUI
         Me.ctlInputFile.Size = New System.Drawing.Size(698, 36)
         Me.ctlInputFile.TabIndex = 22
         '
-        'tableCOpts
-        '
-        Me.tableCOpts.ColumnCount = 2
-        Me.tableCOpts.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tableCOpts.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tableCOpts.Controls.Add(Me.ctlPreprocOpts, 0, 0)
-        Me.tableCOpts.Controls.Add(Me.ctlBlkSortingOpts, 1, 0)
-        Me.tableCOpts.Location = New System.Drawing.Point(15, 130)
-        Me.tableCOpts.Name = "tableCOpts"
-        Me.tableCOpts.RowCount = 1
-        Me.tableCOpts.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tableCOpts.Size = New System.Drawing.Size(662, 212)
-        Me.tableCOpts.TabIndex = 6
-        '
         'ctlPreprocOpts
         '
         Me.ctlPreprocOpts.Location = New System.Drawing.Point(3, 3)
@@ -122,6 +116,23 @@ Partial Class BSCGUI
         Me.ctlBlkSortingOpts.Size = New System.Drawing.Size(325, 206)
         Me.ctlBlkSortingOpts.TabIndex = 14
         '
+        'prgBarTask
+        '
+        Me.prgBarTask.Location = New System.Drawing.Point(15, 417)
+        Me.prgBarTask.Name = "prgBarTask"
+        Me.prgBarTask.Size = New System.Drawing.Size(677, 4)
+        Me.prgBarTask.Step = 1
+        Me.prgBarTask.TabIndex = 26
+        '
+        'lblStatus
+        '
+        Me.lblStatus.AutoSize = True
+        Me.lblStatus.Location = New System.Drawing.Point(12, 424)
+        Me.lblStatus.Name = "lblStatus"
+        Me.lblStatus.Size = New System.Drawing.Size(39, 13)
+        Me.lblStatus.TabIndex = 28
+        Me.lblStatus.Text = "Label1"
+        '
         'BSCGUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -133,6 +144,7 @@ Partial Class BSCGUI
         Me.Name = "BSCGUI"
         Me.Text = "Block Sorting Compressor"
         Me.MainPanel.ResumeLayout(False)
+        Me.MainPanel.PerformLayout()
         Me.tableCOpts.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -144,8 +156,9 @@ Partial Class BSCGUI
     Friend WithEvents ctlModeSelect As bsc_gui.ctlModeSelect
     Friend WithEvents ctlPreprocOpts As bsc_gui.ctlPreprocOpts
     Friend WithEvents ctlBlkSortingOpts As bsc_gui.ctlBlkSortingOpts
-    Friend WithEvents prgBarTask As System.Windows.Forms.ProgressBar
     Friend WithEvents ctlBtnGrpConfirm As bsc_gui.ctlBtnGrpConfirm
     Friend WithEvents ctlMiscOptions As bsc_gui.ctlMiscOptions
+    Friend WithEvents lblStatus As System.Windows.Forms.Label
+    Friend WithEvents prgBarTask As System.Windows.Forms.ProgressBar
 
 End Class
