@@ -23,11 +23,11 @@ Partial Class ctlBlkSortingOpts
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.grpBoxBlockSort = New System.Windows.Forms.GroupBox()
+        Me.ctlAlgs = New bsc_gui.ctlAlgs()
         Me.comboContext = New System.Windows.Forms.ComboBox()
         Me.lblContext = New System.Windows.Forms.Label()
         Me.lblBlkSize = New System.Windows.Forms.Label()
         Me.numBlkSize = New System.Windows.Forms.NumericUpDown()
-        Me.ctlAlgs = New bsc_gui.ctlAlgs()
         Me.grpBoxBlockSort.SuspendLayout()
         CType(Me.numBlkSize, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -46,6 +46,13 @@ Partial Class ctlBlkSortingOpts
         Me.grpBoxBlockSort.TabIndex = 2
         Me.grpBoxBlockSort.TabStop = False
         Me.grpBoxBlockSort.Text = "Block Sorting"
+        '
+        'ctlAlgs
+        '
+        Me.ctlAlgs.Location = New System.Drawing.Point(3, 70)
+        Me.ctlAlgs.Name = "ctlAlgs"
+        Me.ctlAlgs.Size = New System.Drawing.Size(316, 130)
+        Me.ctlAlgs.TabIndex = 13
         '
         'comboContext
         '
@@ -86,13 +93,6 @@ Partial Class ctlBlkSortingOpts
         Me.numBlkSize.TabIndex = 0
         Me.numBlkSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.numBlkSize.Value = New Decimal(New Integer() {25, 0, 0, 0})
-        '
-        'ctlAlgs
-        '
-        Me.ctlAlgs.Location = New System.Drawing.Point(6, 73)
-        Me.ctlAlgs.Name = "ctlAlgs"
-        Me.ctlAlgs.Size = New System.Drawing.Size(316, 133)
-        Me.ctlAlgs.TabIndex = 13
         '
         'ctlBlkSortingOpts
         '
