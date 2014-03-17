@@ -12,7 +12,7 @@ Public Class BSCGUI
 
     ' Loader
     Private Sub BSCGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        BSCGUI_Initialize()
     End Sub
 
     ' Handlers for exit / OK
