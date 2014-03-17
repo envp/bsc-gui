@@ -37,4 +37,12 @@ Public Class Helpers
         End If
         Return GPUFoud
     End Function
+
+    ' Command builder Method
+    ' Figure out how to refactor later
+    ' Convert variables to an Enum(?) and work with a single Getter
+    ' and magic numbers(?)
+    Public Function BuildCommand() As String
+        Return ""
+    End Function
 End Class

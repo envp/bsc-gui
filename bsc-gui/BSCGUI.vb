@@ -1,20 +1,15 @@
 ﻿
 Public Class BSCGUI
     ' String parameters
-
     ' Preserve mode to be updated on modeChanged Event
     Dim mode As String
 
-    ' Boolean options, set to False to imply not ticked/selected
-    Dim disableParallel As Boolean
-    Dim disableMCS As Boolean
-    Dim enableRAMPages As Boolean
-
     ' Handlers for exit / OK
-    Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
-        ' Builder method pls
+    Private Sub btnOK_Click() Handles ctlBtnGrpConfirm.ActionOK
+        ' Command-builder method pls
+
     End Sub
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+    Private Sub btnCancel_Click() Handles ctlBtnGrpConfirm.ActionCancel
         Me.Close()
     End Sub
     ' End Handlers for exit / OK
@@ -28,4 +23,5 @@ Public Class BSCGUI
             tableCOpts.Enabled = False
         End If
     End Sub
+
 End Class

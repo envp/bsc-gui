@@ -90,6 +90,12 @@
     <Compile Include="ctlBlkSortingOpts.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ctlBtnGrpConfirm.Designer.vb">
+      <DependentUpon>ctlBtnGrpConfirm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctlBtnGrpConfirm.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ctlInputFile.Designer.vb">
       <DependentUpon>ctlInputFile.vb</DependentUpon>
     </Compile>
@@ -100,6 +106,12 @@
       <DependentUpon>ctlLZPOpts.vb</DependentUpon>
     </Compile>
     <Compile Include="ctlLZPOpts.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlMiscOptions.Designer.vb">
+      <DependentUpon>ctlMiscOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctlMiscOptions.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ctlModeSelect.Designer.vb">
@@ -147,11 +159,17 @@
     <EmbeddedResource Include="ctlBlkSortingOpts.resx">
       <DependentUpon>ctlBlkSortingOpts.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ctlBtnGrpConfirm.resx">
+      <DependentUpon>ctlBtnGrpConfirm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctlInputFile.resx">
       <DependentUpon>ctlInputFile.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctlLZPOpts.resx">
       <DependentUpon>ctlLZPOpts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlMiscOptions.resx">
+      <DependentUpon>ctlMiscOptions.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctlModeSelect.resx">
       <DependentUpon>ctlModeSelect.vb</DependentUpon>
