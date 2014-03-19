@@ -11,7 +11,8 @@
     <AssemblyName>bsc-gui</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -71,6 +72,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArgBuilder.vb" />
     <Compile Include="BSCGUI.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +134,12 @@
     <Compile Include="ctlPreprocOpts.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="ctlProgressBar.Designer.vb">
+      <DependentUpon>ctlProgressBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctlProgressBar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Helpers.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -179,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctlPreprocOpts.resx">
       <DependentUpon>ctlPreprocOpts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlProgressBar.resx">
+      <DependentUpon>ctlProgressBar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
