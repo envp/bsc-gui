@@ -12,7 +12,7 @@ Public Class Helpers
             Dim wmiResults As New ManagementObjectSearcher _
                 ("root\CIMV2", "SELECT * FROM Win32_VideoController ")
 
-            ' Iteratre through results of query to get the Name property
+            ' Iterate through results of query to get the Name property
             For Each wmiResult As ManagementObject In wmiResults.Get()
                 GPUName = wmiResult.GetPropertyValue("Name").ToString
             Next
@@ -25,7 +25,7 @@ Public Class Helpers
     End Function
 
     ' Detect if VideoCard supports CUDA
-    ' implying NVIDIA or not
+    ' I think this is bad practice...
     Public Function isCUDAEnabled() As Boolean
         Dim localHelper As New Helpers
         Dim tmpGPUName As String = localHelper.GetGPUName()

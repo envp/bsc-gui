@@ -1,4 +1,4 @@
-﻿Public Class ctlModeSelect
+﻿Public Class CtlModeSelect
     ' Custom Event to notify if comboBox has changed
     Public Event modeChanged(ByVal num As UInteger)
 

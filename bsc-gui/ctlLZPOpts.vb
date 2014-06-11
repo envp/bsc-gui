@@ -1,4 +1,4 @@
-﻿Public Class ctlLZPOpts
+﻿Public Class CtlLZPOpts
     ' Variables for spinners
     Dim lzpDictSize As UInteger
     Dim lzpMinMatchLength As UInteger

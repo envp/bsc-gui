@@ -1,4 +1,4 @@
-﻿Public Class ctlPreprocOpts
+﻿Public Class CtlPreprocOpts
     ' Checkbox booleans
     Dim disablePreproc As Boolean
     Dim enableSegments As Boolean

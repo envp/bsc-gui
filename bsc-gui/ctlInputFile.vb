@@ -1,4 +1,4 @@
-﻿Public Class ctlInputFile
+﻿Public Class CtlInputFile
     Dim inFileName As String
     Public Event InFileSelected(ByVal inFileName As String)
 

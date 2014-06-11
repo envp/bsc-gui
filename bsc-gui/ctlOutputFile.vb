@@ -1,4 +1,4 @@
-﻿Public Class ctlOutputFile
+﻿Public Class CtlOutputFile
     Dim outFileName As String
 
     ' Proxy Init Module

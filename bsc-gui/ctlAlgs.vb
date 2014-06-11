@@ -1,4 +1,4 @@
-﻿Public Class ctlAlgs
+﻿Public Class CtlAlgs
     ' Boolean options
     Dim useSortTransform As Boolean
     Dim useCudaAccel As Boolean
