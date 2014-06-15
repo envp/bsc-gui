@@ -3,8 +3,8 @@
     ' Capture events from all over the place
     Dim inFileName As String
 
-    Private Sub ctlInputFile_FileSelected(ByVal inFilename As String) Handles CtlInputFile.InFileSelected
-        ' Do something useful
-    End Sub
+    '   Private Sub ctlInputFile_FileSelected(ByVal inFilename As String) Handles ctlInput.InFileSelected
+    '       Do something useful
+    '   End Sub
 
 End Class

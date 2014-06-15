@@ -17,7 +17,7 @@ Public Class BSCGUI
 
     ' Handlers for exit / OK
     Private Sub btnOK_Click() Handles ctlBtnGrpConfirm.ActionOK
-        ' Command-builder method pls
+        ' Build the CLI args based on events fired by all submodules
 
     End Sub
     Private Sub btnCancel_Click() Handles ctlBtnGrpConfirm.ActionCancel
@@ -36,6 +36,6 @@ Public Class BSCGUI
     End Sub
 
     Private Sub prgBarTask_Click(sender As Object, e As EventArgs) Handles prgBarTask.Click
-        prgBarTask.Value = 100
+        prgBarTask.Value = 64
     End Sub
 End Class
