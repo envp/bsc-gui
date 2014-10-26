@@ -1,4 +1,9 @@
 ﻿Public Class CtlPreprocOpts
+    Event preprocDisabled(ByVal disablePreproc As Boolean)
+    Event segmentsEnabled(ByVal enableSegments As Boolean)
+    Event structDataEnabled(ByVal enableStructData As Boolean)
+    Event lzpDisabled(ByVal disableLZP As Boolean)
+
     ' Checkbox booleans
     Dim disablePreproc As Boolean
     Dim enableSegments As Boolean

@@ -1,9 +1,9 @@
 ﻿Public Class CtlBlkSortingOpts
-    ' Unsigned integer parameters
+    Event blkSizeChanged(ByVal blkSize As UInteger)
+    Event contextChanged(ByVal context As String)
+
     Dim blkSize As UInteger
     Dim nParallel As UInteger
-
-    'String Parameters
     Dim context As String
 
     Private Function estMemUsage(blkSize As UInteger, nParallel As UInteger) As UInteger
