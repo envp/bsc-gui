@@ -1,6 +1,6 @@
 ﻿Imports System
 Imports System.Exception
-Public Class ctlProgressBar
+Public Class CtlProgressBar
     Public Event ProgressBarFull()
     Public Event ProgressBarEmpty()
 

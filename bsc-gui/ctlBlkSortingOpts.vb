@@ -1,4 +1,4 @@
-﻿Public Class ctlBlkSortingOpts
+﻿Public Class CtlBlkSortingOpts
     ' Unsigned integer parameters
     Dim blkSize As UInteger
     Dim nParallel As UInteger

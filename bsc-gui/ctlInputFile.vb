@@ -1,6 +1,6 @@
-﻿Public Class ctlInputFile
-    Dim inFileName As String
+﻿Public Class CtlInputFile
     Public Event InFileSelected(ByVal inFileName As String)
+    Dim inFileName As String
 
     ' Proxy Init Module
     Private Sub ctlInputFile_Initialize()
@@ -28,5 +28,4 @@
         End If
     End Sub
     ' End Handler
-
 End Class

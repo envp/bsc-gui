@@ -1,4 +1,4 @@
-﻿Public Class ctlMiscOptions
+﻿Public Class CtlMiscOptions
     ' Boolean options, set to False to imply not ticked/selected
     Dim disableParallel As Boolean
     Dim disableMCS As Boolean

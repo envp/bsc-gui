@@ -1,4 +1,5 @@
-﻿Public Class ctlOutputFile
+﻿Public Class CtlOutputFile
+    Public Event OutFileSelected(ByVal outFileName As String)
     Dim outFileName As String
 
     ' Proxy Init Module
@@ -14,8 +15,8 @@
 
     ' File Save button handler
     Private Sub btnSaveFile_Click(sender As Object, e As EventArgs) Handles btnSaveFile.Click
-        If SaveFileDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
-            txtOutFile.Text = SaveFileDialog.FileName
+        If saveFileDialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            txtOutFile.Text = saveFileDialog.FileName
             outFileName = txtOutFile.Text
         End If
     End Sub

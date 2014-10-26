@@ -22,15 +22,16 @@ Partial Class BSCGUI
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BSCGUI))
         Me.MainPanel = New System.Windows.Forms.Panel()
-        Me.tableCOpts = New System.Windows.Forms.TableLayoutPanel()
-        Me.prgBarTask = New System.Windows.Forms.ProgressBar()
         Me.lblStatus = New System.Windows.Forms.Label()
         Me.ctlMiscOptions = New bsc_gui.ctlMiscOptions()
+        Me.prgBarTask = New System.Windows.Forms.ProgressBar()
         Me.ctlBtnGrpConfirm = New bsc_gui.ctlBtnGrpConfirm()
         Me.ctlModeSelect = New bsc_gui.ctlModeSelect()
         Me.ctlOutputFile = New bsc_gui.ctlOutputFile()
         Me.ctlInputFile = New bsc_gui.ctlInputFile()
+        Me.tableCOpts = New System.Windows.Forms.TableLayoutPanel()
         Me.ctlPreprocOpts = New bsc_gui.ctlPreprocOpts()
         Me.ctlBlkSortingOpts = New bsc_gui.ctlBlkSortingOpts()
         Me.MainPanel.SuspendLayout()
@@ -53,28 +54,6 @@ Partial Class BSCGUI
         Me.MainPanel.Size = New System.Drawing.Size(704, 442)
         Me.MainPanel.TabIndex = 0
         '
-        'tableCOpts
-        '
-        Me.tableCOpts.ColumnCount = 2
-        Me.tableCOpts.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tableCOpts.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tableCOpts.Controls.Add(Me.ctlPreprocOpts, 0, 0)
-        Me.tableCOpts.Controls.Add(Me.ctlBlkSortingOpts, 1, 0)
-        Me.tableCOpts.Location = New System.Drawing.Point(15, 130)
-        Me.tableCOpts.Name = "tableCOpts"
-        Me.tableCOpts.RowCount = 1
-        Me.tableCOpts.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.tableCOpts.Size = New System.Drawing.Size(662, 212)
-        Me.tableCOpts.TabIndex = 6
-        '
-        'prgBarTask
-        '
-        Me.prgBarTask.Location = New System.Drawing.Point(15, 417)
-        Me.prgBarTask.Name = "prgBarTask"
-        Me.prgBarTask.Size = New System.Drawing.Size(677, 4)
-        Me.prgBarTask.Step = 1
-        Me.prgBarTask.TabIndex = 26
-        '
         'lblStatus
         '
         Me.lblStatus.AutoSize = True
@@ -89,6 +68,14 @@ Partial Class BSCGUI
         Me.ctlMiscOptions.Name = "ctlMiscOptions"
         Me.ctlMiscOptions.Size = New System.Drawing.Size(187, 69)
         Me.ctlMiscOptions.TabIndex = 27
+        '
+        'prgBarTask
+        '
+        Me.prgBarTask.Location = New System.Drawing.Point(15, 417)
+        Me.prgBarTask.Name = "prgBarTask"
+        Me.prgBarTask.Size = New System.Drawing.Size(677, 4)
+        Me.prgBarTask.Step = 1
+        Me.prgBarTask.TabIndex = 26
         '
         'ctlBtnGrpConfirm
         '
@@ -118,6 +105,20 @@ Partial Class BSCGUI
         Me.ctlInputFile.Size = New System.Drawing.Size(698, 36)
         Me.ctlInputFile.TabIndex = 22
         '
+        'tableCOpts
+        '
+        Me.tableCOpts.ColumnCount = 2
+        Me.tableCOpts.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tableCOpts.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tableCOpts.Controls.Add(Me.ctlPreprocOpts, 0, 0)
+        Me.tableCOpts.Controls.Add(Me.ctlBlkSortingOpts, 1, 0)
+        Me.tableCOpts.Location = New System.Drawing.Point(15, 130)
+        Me.tableCOpts.Name = "tableCOpts"
+        Me.tableCOpts.RowCount = 1
+        Me.tableCOpts.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tableCOpts.Size = New System.Drawing.Size(662, 212)
+        Me.tableCOpts.TabIndex = 6
+        '
         'ctlPreprocOpts
         '
         Me.ctlPreprocOpts.Location = New System.Drawing.Point(3, 3)
@@ -138,6 +139,7 @@ Partial Class BSCGUI
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(704, 442)
         Me.Controls.Add(Me.MainPanel)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximumSize = New System.Drawing.Size(720, 480)
         Me.MinimumSize = New System.Drawing.Size(720, 480)
         Me.Name = "BSCGUI"

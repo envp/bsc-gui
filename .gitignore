@@ -4,6 +4,12 @@
 # github commit message
 .gitmsg
 
+# local images
+*.png
+*.jpg
+*.jpeg
+*.ico
+
 # logfiles
 *.log
 
@@ -160,3 +166,4 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+

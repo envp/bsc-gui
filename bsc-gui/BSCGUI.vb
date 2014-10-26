@@ -1,41 +1,38 @@
-﻿
+﻿Imports bsc_gui.Helpers
+Imports bsc_gui.ArgBuilder
 Public Class BSCGUI
-    ' String parameters
-    ' Preserve mode to be updated on modeChanged Event
     Dim mode As String
+    Public appArgs As ArgsList
 
     ' Proxy Init Module
-    ' Create a random getter for greeting status label
     Private Sub BSCGUI_Initialize()
         lblStatus.Text = "Ready to pack!"
+        appArgs.mode = "e"
     End Sub
 
     ' Loader
     Private Sub BSCGUI_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BSCGUI_Initialize()
+        ' Register event handlers! (https://stackoverflow.com/questions/24227158/)
+        AddHandler ctlInputFile.InFileSelected, AddressOf ArgBuilder.ctlInputFile_FileSelected
+        AddHandler ctlOutputFile.OutFileSelected, AddressOf ArgBuilder.ctlOutputFile_FileSelected
+        AddHandler ctlModeSelect.modeChanged, AddressOf ArgBuilder.ctlModeSelect_ModeChanged
+
     End Sub
 
     ' Handlers for exit / OK
     Private Sub btnOK_Click() Handles ctlBtnGrpConfirm.ActionOK
-        ' Command-builder method pls
-
+        ' Build the CLI args based on events fired by all submodules
+        MsgBox(appArgs.inFileName)
+        MsgBox(appArgs.outFileName)
+        MsgBox(appArgs.mode)
     End Sub
     Private Sub btnCancel_Click() Handles ctlBtnGrpConfirm.ActionCancel
         Me.Close()
     End Sub
     ' End Handlers for exit / OK
 
-    Private Sub ctlModeSelect_Changed(n As UInteger) Handles ctlModeSelect.modeChanged
-        If n = 0 Then
-            mode = "e"
-            tableCOpts.Enabled = True
-        ElseIf n = 1 Then
-            mode = "d"
-            tableCOpts.Enabled = False
-        End If
-    End Sub
-
     Private Sub prgBarTask_Click(sender As Object, e As EventArgs) Handles prgBarTask.Click
-        prgBarTask.Value = 100
+        prgBarTask.Value = 64
     End Sub
 End Class

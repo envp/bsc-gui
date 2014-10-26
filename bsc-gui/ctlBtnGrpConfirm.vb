@@ -1,4 +1,4 @@
-﻿Public Class ctlBtnGrpConfirm
+﻿Public Class CtlBtnGrpConfirm
     Event ActionCancel()
     Event ActionOK()
 
