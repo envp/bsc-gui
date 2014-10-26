@@ -45,4 +45,5 @@ Public Class Helpers
     Public Function BuildCommand() As String
         Return ""
     End Function
+
 End Class
