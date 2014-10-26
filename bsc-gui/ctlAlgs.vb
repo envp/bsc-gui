@@ -1,10 +1,12 @@
 ﻿Public Class CtlAlgs
-    ' Boolean options
+    Event useSTChanged(ByVal useSortTransform As Boolean)
+    Event useCUDAChanged(ByVal useCudeAccel As Boolean)
+    Event useEntropyCodeChanged(ByVal useStatEntEnc As Boolean)
+    Event sTOrderChanged(ByVal sortTransformOrder As UInteger)
+
     Dim useSortTransform As Boolean
     Dim useCudaAccel As Boolean
     Dim useStatEntEnc As Boolean
-
-    'Unsigned Integer Options
     Dim sortTransformOrder As UInteger
 
     Dim helper As New Helpers
@@ -28,7 +30,7 @@
 
     ' Handler for radio button states
     Private Sub rBtnEntEncStatic_CheckedChanged(sender As Object, e As EventArgs) Handles rBtnEntEncStatic.CheckedChanged, rBtnEntEncAdaptive.CheckedChanged
-        ' Ensure 
+        ' Ensure this
         If Not rBtnEntEncAdaptive.Checked And rBtnEntEncStatic.Checked Then
             useStatEntEnc = rBtnEntEncStatic.Checked
         Else
@@ -39,15 +41,7 @@
 
     ' Handle Sort Transform Checkbox
     Private Sub chkBoxSortTransform_CheckedChanged(sender As Object, e As EventArgs) Handles chkBoxSortTransform.CheckedChanged
-        useSortTransform = chkBoxSortTransform.Checked
-
-        ' Else clause: stating the obvious?
-        ' Find out more about this stuff in other parts of the project
-        If useSortTransform Then
-            numSortTransformOder.Enabled = True
-        Else
-            numSortTransformOder.Enabled = False
-        End If
+        numSortTransformOder.Enabled = chkBoxSortTransform.Checked
     End Sub
     ' End Handler
 
