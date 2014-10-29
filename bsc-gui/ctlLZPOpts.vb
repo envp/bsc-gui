@@ -1,7 +1,10 @@
 ﻿Public Class CtlLZPOpts
+    Event lzpDictSizeChanged(ByVal lzpDictSize As UInteger)
+    Event lzpMatchLengthChanged(ByVal lzpMinMatchLength As UInteger)
+
     ' Variables for spinners
-    Dim lzpDictSize As UInteger
-    Dim lzpMinMatchLength As UInteger
+    Private lzpDictSize As UInteger
+    Private lzpMinMatchLength As UInteger
 
     ' Proxy Init Module
     Private Sub ctlLZPOpts_Initialize()

@@ -141,6 +141,7 @@
     <Compile Include="ctlProgressBar.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="EvtHandlers.vb" />
     <Compile Include="Helpers.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
