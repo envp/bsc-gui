@@ -4,7 +4,7 @@ A GUI for [libbsc](http://libbsc.com), the high performance block-sorting data c
 ![Looks like this](http://i.imgur.com/GkKRFLJ.png)
 
 ## Details
-Currently written in VB.NET, we may move to a Qt-based interface depending on the API development of libbsc (preogress indicators etc)
+Currently written in VB.NET, we may move to a Qt-based interface depending on the API development of libbsc (progress indicators etc)
 
 ## License
 [License: Apache Version 2.0](https://github.com/vaibhav-y/bsc-gui/blob/master/LICENSE)
